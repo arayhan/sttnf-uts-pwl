@@ -16,12 +16,14 @@
     <?php include('components/header.php'); ?>
     <?php include('components/menu.php'); ?>
 
-    <div class="row no-gutters">
-        <div class="col-md-3">
-            <?php include('components/sidebar.php'); ?>
-        </div>
-        <div class="col-md-9">
-            <?php include('components/main.php'); ?>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-9">
+                <?php include('components/main.php'); ?>
+            </div>
+            <div class="col-md-3">
+                <?php include('components/sidebar.php'); ?>
+            </div>
         </div>
     </div>
 
