@@ -33,8 +33,9 @@ $result = $pegawai->getPegawai();
                 <td><?= $data['agama']; ?></td>
                 <td><?= $data['divisi']; ?></td>
                 <td>
-                    <a href="index.php?page=form-pegawai&action=edit" class="badge badge-warning">Edit</a>
                     <a href="index.php?page=detail-pegawai" class="badge badge-success">Detail</a>
+                    <a href="index.php?page=form-pegawai&action=edit" class="badge badge-warning">Edit</a>
+                    <a href="index.php?page=data-pegawai" class="badge badge-danger">Hapus</a>
                 </td>
             </tr>
             <?php $no++; ?>

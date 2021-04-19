@@ -15,7 +15,7 @@ $result = $divisi->getDivisi();
             <div class="col-sm-10">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">@</div>
+                        <div class="input-group-text"><i class="ion-card"></i></div>
                     </div>
                     <input type="text" class="form-control" name="nip" id="nip" placeholder="NIP">
                 </div>
