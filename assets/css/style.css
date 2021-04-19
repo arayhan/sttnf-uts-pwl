@@ -22,5 +22,7 @@
 }
 
 #homeBanner .carousel-inner .carousel-item .jumbotron {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background: rgba(0,0,0,0.3);
 }
