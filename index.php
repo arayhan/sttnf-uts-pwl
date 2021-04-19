@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTS PWL</title>
-</head>
+
+<?php include('components/helmet.php'); ?>
+
 <body>
-    <h1>UTS PWL - Ahmed Rayhan Primadedas</h1>
+    <?php include('components/header.php'); ?>
+    <?php include('components/menu.php'); ?>
+
+    <div class="row">
+        <div class="col-md-4">
+            <?php include('components/sidebar.php'); ?>
+        </div>
+        <div class="col-md-8">
+            <?php include('components/main.php'); ?>
+        </div>
+    </div>
+
+    <?php include('components/footer.php'); ?>
 </body>
+
 </html>
