@@ -1,9 +1,9 @@
 <div>
     <ul class="list-group">
-        <li class="list-group-item"><a href="#">Cras justo odio</a></li>
-        <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
-        <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
-        <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
-        <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+        <li class="list-group-item"><a href="#">Sidebar Menu #1</a></li>
+        <li class="list-group-item"><a href="#">Sidebar Menu #2</a></li>
+        <li class="list-group-item"><a href="#">Sidebar Menu #3</a></li>
+        <li class="list-group-item"><a href="#">Sidebar Menu #4</a></li>
+        <li class="list-group-item"><a href="#">Sidebar Menu #5</a></li>
     </ul>
 </div>
