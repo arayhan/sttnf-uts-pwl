@@ -1,5 +1,5 @@
 <?php
-class Pegawai
+class Divisi
 {
     private $koneksi;
 
@@ -9,11 +9,9 @@ class Pegawai
         $this->koneksi = $dbh;
     }
 
-    public function getPegawai()
+    public function getDivisi()
     {
-        $sql = "SELECT tb_pegawai.*, tb_divisi.nama AS divisi FROM tb_pegawai
-                INNER JOIN tb_divisi ON tb_pegawai.id_divisi = tb_divisi.id
-                ORDER BY tb_pegawai.id DESC";
+        $sql = "SELECT tb_divisi.nama AS divisi FROM tb_divisi";
 
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
