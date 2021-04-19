@@ -9,11 +9,11 @@ class Pegawai
         $this->koneksi = $dbh;
     }
 
-    public function dataPegawai()
+    public function getPegawai()
     {
-        $sql = "SELECT produk.*, jenis.nama AS kategori FROM produk
-                INNER JOIN jenis ON jenis.id = produk.idjenis
-                ORDER BY produk.id DESC";
+        $sql = "SELECT tb_pegawai.*, tb_divisi.nama AS divisi FROM tb_pegawai
+                INNER JOIN tb_divisi ON tb_pegawai.id_divisi = tb_divisi.id
+                ORDER BY tb_pegawai.id DESC";
 
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
