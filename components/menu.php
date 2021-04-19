@@ -18,7 +18,7 @@
                             Data
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Data Pegawai</a>
+                            <a class="dropdown-item" href="data-pegawai.php">Data Pegawai</a>
                         </div>
                     </li>
                     <li class="nav-item">
