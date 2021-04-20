@@ -8,7 +8,7 @@ $result = $pegawai->getPegawai();
 
 <a href="index.php?page=form-pegawai" class="btn btn-primary">Tambah Data</a>
 <div class="my-3"></div>
-<table class="table">
+<table class="table table-responsive">
     <thead class="thead-light">
         <tr>
             <th scope="col">No</th>
