@@ -35,7 +35,10 @@ $result = $pegawai->getPegawai();
                 <td>
                     <a href="index.php?page=detail-pegawai&id=<?= $data['id'] ?>" class="badge badge-success">Detail</a>
                     <a href="index.php?page=form-edit-pegawai&id=<?= $data['id'] ?>" class="badge badge-warning">Edit</a>
-                    <a href="index.php?page=data-pegawai&id=<?= $data['id'] ?>" class="badge badge-danger">Hapus</a>
+                    <form method="post" action="controllers/pegawaiController.php">
+                        <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                        <button onclick="return confirm('Apakah Anda yakin menghapus data ini?')" name="action" value="hapus" class="badge badge-danger">Hapus</button>
+                    </form>
                 </td>
             </tr>
             <?php $no++; ?>

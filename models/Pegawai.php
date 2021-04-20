@@ -30,4 +30,12 @@ class Pegawai
         $rs = $ps->fetchAll();
         return $rs;
     }
+
+    public function deletePegawai($id)
+    {
+        $sql = "DELETE FROM tb_pegawai WHERE id=?";
+
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($id);
+    }
 }
