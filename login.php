@@ -1,4 +1,9 @@
 <?php session_start(); ?>
+<?php
+if (isset($_SESSION['MEMBER'])) {
+    header('Location:index.php?page=home');
+}
+?>
 <?php require_once('config/koneksi.php'); ?>
 
 <?php include_once('components/site/top-code.php'); ?>
