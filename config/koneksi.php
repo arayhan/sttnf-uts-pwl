@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=sttnf_uts_pwl;host=localhost';
+$dsn = 'mysql:dbname=dbpegawai;host=localhost';
 $user = 'root';
 $password = '';
 
