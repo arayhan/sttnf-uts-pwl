@@ -27,20 +27,20 @@ if ($_REQUEST['id']) {
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="ion-card"></i></div>
                         </div>
-                        <input type="text" value="<?= $pegawaiData[0]['nip'] ?>" class="form-control" name="nip" id="nip" placeholder="NIP">
+                        <input required type="text" value="<?= $pegawaiData[0]['nip'] ?>" class="form-control" name="nip" id="nip" placeholder="NIP">
                     </div>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2" for="nama">Nama</label>
                 <div class="col-sm-10">
-                    <input type="text" value="<?= $pegawaiData[0]['nama'] ?>" class="form-control" name="nama" id="nama" placeholder="Nama">
+                    <input required type="text" value="<?= $pegawaiData[0]['nama'] ?>" class="form-control" name="nama" id="nama" placeholder="Nama">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2" for="email">Email</label>
                 <div class="col-sm-10">
-                    <input type="text" value="<?= $pegawaiData[0]['email'] ?>" class="form-control" name="email" id="email" placeholder="Email">
+                    <input required type="text" value="<?= $pegawaiData[0]['email'] ?>" class="form-control" name="email" id="email" placeholder="Email">
                 </div>
             </div>
             <div class="form-group row">
@@ -48,7 +48,7 @@ if ($_REQUEST['id']) {
                 <div class="col-sm-10">
                     <?php foreach (AGAMA as $agama) : ?>
                         <div class="form-check">
-                            <input <?= $pegawaiData[0]['agama'] == $agama ? 'checked' : '' ?> class="form-check-input" type="radio" name="agama" id="<?= $agama ?>" value="<?= $agama ?>">
+                            <input required <?= $pegawaiData[0]['agama'] == $agama ? 'checked' : '' ?> class="form-check-input" type="radio" name="agama" id="<?= $agama ?>" value="<?= $agama ?>">
                             <label class="form-check-label" for="<?= $agama ?>"><?= $agama ?></label>
                         </div>
                     <?php endforeach; ?>
@@ -57,7 +57,7 @@ if ($_REQUEST['id']) {
             <div class="form-group row">
                 <label class="col-sm-2" for="divisi">Divisi</label>
                 <div class="col-sm-10">
-                    <select name="divisi" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <select required name="divisi" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                         <option <?= $pegawaiData[0]['divisi'] == "" ? "selected" : "" ?>>-- Pilih Divisi --</option>
                         <?php foreach ($divisiData as $divisi) { ?>
                             <option <?= $pegawaiData[0]['divisi'] == $divisi['nama'] ? "selected" : "" ?> value="<?= $divisi['id'] ?>"><?= $divisi['nama'] ?></option>
@@ -69,7 +69,7 @@ if ($_REQUEST['id']) {
                 <label class="col-sm-2" for="foto">Foto</label>
                 <div class="col-sm-10 input-group mb-3">
                     <div class="custom-file">
-                        <input type="file" name="foto" class="custom-file-input" id="foto">
+                        <input required type="file" name="foto" class="custom-file-input" id="foto">
                         <label class="custom-file-label" for="foto">Choose file</label>
                     </div>
                 </div>
