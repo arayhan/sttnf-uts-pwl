@@ -69,7 +69,7 @@ if ($_REQUEST['id']) {
                 <label class="col-sm-2" for="foto">Foto</label>
                 <div class="col-sm-10 input-group mb-3">
                     <div class="custom-file">
-                        <input required type="file" name="foto" class="custom-file-input" id="foto">
+                        <input type="file" name="foto" class="custom-file-input" id="foto">
                         <label class="custom-file-label" for="foto">Choose file</label>
                     </div>
                 </div>
