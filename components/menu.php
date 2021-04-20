@@ -22,7 +22,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-lg-none" href="#">Login</a>
+                        <a class="nav-link d-lg-none" href="index.php?page=login">Login</a>
                     </li>
                     <!-- <li class="nav-item dropdown d-lg-none">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,7 +34,7 @@
                     </li> -->
                 </ul>
             </div>
-            <a href="#" class="btn btn-primary d-none d-lg-block">Login</a>
+            <a href="login.php" class="btn btn-primary d-none d-lg-block">Login</a>
             <!-- <div class="dropdown d-none d-lg-block">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ahmed Rayhan Primadedas
