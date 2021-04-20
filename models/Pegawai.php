@@ -33,9 +33,17 @@ class Pegawai
 
     public function deletePegawai($id)
     {
-        $sql = "DELETE FROM tb_pegawai WHERE id=?";
+        $sql = "DELETE FROM tb_pegawai WHERE id=$id";
 
         $ps = $this->koneksi->prepare($sql);
-        $ps->execute($id);
+        $ps->execute();
+    }
+
+    public function updatePegawai($id, $data)
+    {
+        $sql = "UPDATE tb_pegawai SET nip=?,nama=?,email=?,agama=?, id_divisi=?,foto=? WHERE id=$id";
+
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
     }
 }

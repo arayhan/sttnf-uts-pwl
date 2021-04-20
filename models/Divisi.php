@@ -11,7 +11,7 @@ class Divisi
 
     public function getDivisi()
     {
-        $sql = "SELECT tb_divisi.nama AS divisi FROM tb_divisi";
+        $sql = "SELECT * FROM tb_divisi";
 
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
