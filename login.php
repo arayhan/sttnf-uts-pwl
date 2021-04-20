@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require_once('config/koneksi.php'); ?>
 
 <?php include_once('components/site/top-code.php'); ?>
@@ -9,15 +10,15 @@
         <div class="card-body">
             <h3 class="text-center">Login</h3>
             <hr class="my-3">
-            <form method="post">
+            <form method="post" action="controllers/memberController.php">
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="username">Username</label>
                     <div>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="ion-person"></i></div>
                             </div>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                         </div>
                     </div>
                 </div>
@@ -32,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary float-right" type="submit">Login</button>
+                <button class="btn btn-primary float-right" name="action" value="login" type="submit">Login</button>
             </form>
         </div>
     </div>

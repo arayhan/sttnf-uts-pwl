@@ -21,28 +21,38 @@
                             <a class="dropdown-item" href="index.php?page=data-pegawai">Data Pegawai</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-lg-none" href="index.php?page=login">Login</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown d-lg-none">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ahmed Rayhan Primadedas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </div>
-                    </li> -->
+                    <?php if (!isset($_SESSION['MEMBER'])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link d-lg-none" href="index.php?page=login">Login</a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="nav-item dropdown d-lg-none">
+                            <form method="post" action="controllers/memberController.php">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?= $_SESSION['MEMBER']['fullname']; ?>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <button class="dropdown-item" name="action" value="logout">Logout</button>
+                                </div>
+                            </form>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
-            <a href="login.php" class="btn btn-primary d-none d-lg-block">Login</a>
-            <!-- <div class="dropdown d-none d-lg-block">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ahmed Rayhan Primadedas
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Logout</a>
+            <?php if (!isset($_SESSION['MEMBER'])) { ?>
+                <a href="login.php" class="btn btn-primary d-none d-lg-block">Login</a>
+            <?php } else { ?>
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= $_SESSION['MEMBER']['fullname']; ?>
+                    </button>
+                    <form method="post" action="controllers/memberController.php">
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <button class="dropdown-item" name="action" value="logout">Logout</button>
+                        </div>
+                    </form>
                 </div>
-            </div> -->
+            <?php } ?>
         </div>
     </nav>
 </div>

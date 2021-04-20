@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require_once('config/koneksi.php'); ?>
 
 <?php include_once('components/site/top-code.php'); ?>
