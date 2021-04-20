@@ -14,6 +14,15 @@ if (isset($_SESSION['MEMBER'])) {
     <div class="card" style="width: 500px; max-width: 100%; margin: 50px 0;">
         <div class="card-body">
             <h3 class="text-center">Login</h3>
+            <div class="mt-3" style="font-size: 0.8em;">
+                you can try to login using one of these accounts :
+                <ul>
+                    <li>arayhan | 123qwe</li>
+                    <li>admin | admin</li>
+                    <li>manager | manager</li>
+                    <li>staff | staff</li>
+                </ul>
+            </div>
             <hr class="my-3">
             <form method="post" action="controllers/memberController.php">
                 <div class="form-group">
