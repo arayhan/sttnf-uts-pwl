@@ -31,6 +31,14 @@ class Pegawai
         return $rs;
     }
 
+    public function insertPegawai($data)
+    {
+        $sql = "INSERT INTO tb_pegawai(nip,nama,email,agama,id_divisi,foto) VALUES (?,?,?,?,?,?)";
+
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
+
     public function deletePegawai($id)
     {
         $sql = "DELETE FROM tb_pegawai WHERE id=$id";

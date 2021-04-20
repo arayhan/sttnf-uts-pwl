@@ -14,7 +14,9 @@ if ($_POST) {
 
     $data = [$nip, $nama, $email, $agama, $divisi, $foto];
 
-    if ($action == "hapus" && $_POST['id']) {
+    if ($action == "tambah") {
+        $pegawai->insertPegawai($data);
+    } else if ($action == "hapus" && $_POST['id']) {
         $id = $_POST['id'];
         $pegawai->deletePegawai($id);
         echo "<script>alert('data berhasil dihapus')</script>";
